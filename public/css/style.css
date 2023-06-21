@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes drop {
+    from {
+      transform: translateY(-100%);
+    }
+    to { 
+      transform: translateY(0);
+    }
+}
+
+.head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 92px;
+    background-color: rgb(238, 154, 106);
+
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.head_logo{
+    width: 5%;
+    float: right;
+}
+
+.head_logo .logo{
+    margin-top: 4px;
+    margin-left: 40px;
+    margin-right: 10px;
+    width: 90%;
+    height: 90%;
+}
+
+.head_ul{
+    width: 40%;
+    float: left;
+    display: block;
+}
+
+.head_ul ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    line-height: 92px;
+}
+
+.head_ul li{
+    display: block;
+}
+
+.head_ul li a{
+    padding: 27px 70px;
+    color: white;
+    text-decoration: none;
+    
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.5s;
+}
+.head_ul li a:hover{
+    color: rgb(238, 154, 106);
+    background-color: white;
+}
+
+main{
+    margin-top: 92px;
+}
+
+
+#slider{
+    margin-top: 92px;
+    width: 100%;
+}
+
+#slider .carousel-indicators, .carousel-control-next, .carousel-control-prev{
+    visibility: hidden;
+}
+
+.carousel-item img{
+    width: 100%;
+    object-fit: cover;
+    height: 909px;
+}
+
+.welcome{
+    width: 80%;
+
+    background-color: rgba(114, 248, 5, 0.7);
+    color: black;
+
+    position: absolute;
+    bottom: 40%;
+
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.welcome h1{
+    font-size: 70px;
+}
+
+.teams{
+    width: 90%;
+    height: 800px;
+    margin-top: 125px;
+    margin-left: 90px;
+
+    font-size: 20px;
+    color: white;
+    text-align: center;
+
+    background-color:rgb(238, 154, 106);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    animation: drop 1s linear forwards;
+}
+
+.teams .memlist{
+    margin-top: 30px;
+}
+
+.teams .memlist .mem{
+    float: left;
+    width: 33%;
+}
+
+.teams .memlist .mem img{
+    object-fit: cover;
+    height: 600px;
+    width: 450px;
+}
+
+.teams .memlist .mem .memname{
+    font-weight: bold;
+}
+
+.searchbar{
+    margin-top: 92px;
+    width: 80%;
+    height: 70px;
+    transform: translateX(10%) translateY(50px);
+    font-size: 30px;
+}
+
+.searchbar form{
+    display: flex;
+    line-height: 60px;
+    justify-content: space-around;
+}
+
+.searchbar form label{
+    justify-content: space-between;
+}
+
+.searchbar form .searchButton{
+    width: 200px;
+}
+
+input[type='radio'] {
+    transform: scale(2);
+}
+
+.grid{
+    padding: 0px 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+    justify-content: center;
+}
+
+.grid .item{
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 3px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(23, 138, 57);
+}
+
+.grid .item:hover {
+    background-color: rgb(238, 154, 106);
+    color: white;
+}
+
+.grid .item img{
+    object-fit: cover;
+    height: 400px;
+    width: 400px;
+}
+
+.grid .item p{
+    font-weight: bold;
+}
+
+.dishinfo{
+    width: 90%;
+    height: 800px;
+    margin-top: 125px;
+    margin-left: 90px;
+
+    font-size: 20px;
+    color: white;
+
+    background-color:rgb(238, 154, 106);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    animation: drop 1s linear forwards;
+    display: flex;
+}
+
+.dishinfo img{
+    width: 60%;
+}
+
+.dishinfo .info{
+    font-size: 30px;
+    padding: 100px;
+}
+
+.status{
+    text-align: center;
+    background-color: azure;
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+.notfound{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}

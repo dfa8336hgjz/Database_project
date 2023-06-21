@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Error</title>
+</head>
+<body style="background-color: rgb(255, 255, 200);">
+    <header>
+        <%- include ('../partials/header') %>
+    </header>
+    <div class="searchbar">
+        <form action="/menu/search">
+            <input type="search" name="input" placeholder="Enter" autocomplete="off">
+            <label><input name="stype" type="radio" value="name" checked> Name</label>
+            <label><input name="stype" type="radio" value="category"> Category</label>
+            <label><input name="stype" type="radio" value="origin"> Origin</label>
+            <input type="submit" value="Search" class="searchButton">
+        </form>
+    </div>
+    <main>
+        <div class="notfound">
+            NOT FOUND
+        </div>
+    </main>
+</body>
+</html>
