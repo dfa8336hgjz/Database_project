@@ -6,14 +6,23 @@ drop table if exists createdFrom;
 drop table if exists dishes;
 drop table if exists origin;
 drop table if exists ingredients;
+drop table if exists category;
+
+
+create table category(
+	id int not null,
+    name varchar(12),
+    primary key (id)
+);
 
 create table dishes(
 	id int not null, 
     name nvarchar(50) collate utf8mb3_vietnamese_ci,
     available boolean,
     price numeric(5,2) check (price >= 0),
-    category varchar(12),
-    primary key (id)
+    category_id int,
+    primary key (id),
+    foreign key (category_id) references category(id)
 );
 
 create table origin(
